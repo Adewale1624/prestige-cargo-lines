@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<style>section{display:flex;align-items:center;justify-content:center;min-height:100vh;}
+.login-form{background:rgba(255,255,255,0.1);padding:3rem;border-radius:20px;border:1px solid white;max-width:400px;width:100%;}</style></head>
+<body>
+<nav><a href="../index.html" class="logo">Prestige Cargo Lines</a></nav>
+<section>
+<form class="login-form" id="loginForm">
+<h1>Admin Login</h1>
+<label>Username <input type="text" id="username"></label>
+<label>Password <input type="password" id="password"></label>
+<button type="submit">Login</button>
+</form>
+</section>
+<script>
+document.getElementById('loginForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ if(username.value==='admin'&&password.value==='prestige2025'){
+   localStorage.setItem('adminLoggedIn','true');location.href='dashboard.html';
+ }else alert('Invalid');
+});
+</script>
+</body></html>
